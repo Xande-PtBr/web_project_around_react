@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexandre Silva" />
+    <meta name="description" content="Around" />
+    <meta name="keywords" content="html,css" />
+    <link rel="shortcut" href="./images/imagegallery.ico" />
+
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Around</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="./images/logo_around.png"
+          alt="Logo Around"
+        />
+      </header>
+
+      <main class="content">
+        <section class="profile">
+          <div class="profile__avatar-container">
+            <img alt="Avatar" class="profile__image" />
+            <button class="profile__edit-avatar-button"></button>
+          </div>
+          <div class="profile__info">
+            <div class="profile__info-name-edit-button">
+              <p class="profile__info-name"></p>
+
+              <button class="profile__edit-button">
+                <img src="./images/edit.png" alt="Editar" />
+              </button>
+            </div>
+            <p class="profile__info-sobre-mim"></p>
+          </div>
+
+          <button class="profile__add-button">
+            <img src="./images/add.png" alt="Adicionar" />
+          </button>
+        </section>
+        <section class="elements">
+          <!---- card template ------>
+
+          <template id="cards-template">
+            <div class="elements__box">
+              <img
+                src="./images/Trash.png"
+                alt="lixeira"
+                class="elements__trash"
+              />
+              <img
+                src="../images/image01.png"
+                alt="image01"
+                class="elements__image"
+              />
+              <div class="elements__contaner-title-like">
+                <h3 class="elements__title">Vale de Yosemite</h3>
+                <img
+                  class="elements__like"
+                  src="./images/like.png"
+                  alt="Logo"
+                  alt="like"
+                />
+              </div>
+            </div>
+          </template>
+        </section>
+        <footer class="footer">
+          <p class="footer__copyright">&copy; 2024 Around The U.S.</p>
+        </footer>
+      </main>
+      <!--------------------------Inicio popup profile-------------------------------------------------->
+      <div class="popup popup_edit_profile">
+        <article class="popup__Container">
+          <h2 class="popup__title">Edite Perfil</h2>
+          <img
+            src="./images/Close_Icon.png"
+            alt="icone close"
+            class="popup__close"
+          />
+          <form class="popup__form">
+            <input
+              type="text"
+              class="popup__form-input popup__input-name"
+              id="name-input"
+              name="name"
+              placeholder="Nome"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+            <span
+              id="name-input-error"
+              class="popup__message-input-error"
+            ></span>
+            <input
+              type="text"
+              class="popup__form-input popup__input-sobre-mim"
+              id="about-input"
+              name="about"
+              placeholder="Sobre mim"
+              required
+              minlength="2"
+              maxlength="200"
+            />
+            <span
+              id="about-input-error"
+              class="popup__message-input-error"
+            ></span>
+            <button type="submit" class="popup__button-save">Salvar</button>
+          </form>
+        </article>
+      </div>
+      <!--------------------------Fim popup profile-------------------------------------------------->
+      <!----------------- inicio popup new card ----------------------------------------------------->
+      <div class="popup popup__new-cards">
+        <article class="popup__Container">
+          <h2 class="popup__title">Novo local</h2>
+          <img
+            src="./images/Close_Icon.png"
+            alt="icone close"
+            class="popup__close-card"
+          />
+          <form class="popup__form popup__form-card">
+            <input
+              type="text"
+              class="popup__input-card-title"
+              id="card-title"
+              name="name"
+              placeholder="Título"
+              required
+              minlength="2"
+              maxlength="30"
+            />
+            <span
+              id="card-title-error"
+              class="popup__message-input-error"
+            ></span>
+            <input
+              type="url"
+              class="popup__input-card-link-img"
+              id="link-de-imagem"
+              name="link"
+              placeholder="Link de imagem"
+              required
+            />
+            <span
+              id="link-de-imagem-error"
+              class="popup__message-input-error"
+            ></span>
+            <button type="submit" class="popup__button-new-card">Criar</button>
+          </form>
+        </article>
+      </div>
+      <!-- -----------------------Fim popup New card------------------------------------------ -->
+      <!-- ----------------------- popup Show image------------------------------------------ -->
+      <div class="popup popup_show-image">
+        <div class="popup__Container-image">
+          <img
+            src="./images/Close_Icon.png"
+            alt="icone close"
+            class="popup__close-image"
+          />
+          <div class="popup__view-image-container">
+            <img class="popup__view-image" alt="name" />
+            <h2 class="popup__title-image"></h2>
+          </div>
+        </div>
+      </div>
+      <!-- -----------------------Fim popup Show image------------------------------------------ -->
+      <!--------------------------Inicio popup ConfirmDelete-------------------------------------------------->
+      <div class="popup popup__confirmation-delete">
+        <article class="popup__Container">
+          <img
+            src="./images/Close_Icon.png"
+            alt="icone close"
+            class="popup__close-delete"
+          />
+          <form class="popup__form popup__form-confirmation-delete">
+            <h2 class="popup__title">Tem certeza?</h2>
+            <button type="submit" class="popup__button-confirmation-delete">
+              Sim
+            </button>
+          </form>
+        </article>
+      </div>
+      <!--------------------------Fim popup ConfirmDelete-------------------------------------------------->
+      <!--------------------------Inicio popup profile avatar edit-------------------------------------------------->
+
+      <div class="popup popup_edit_profile-avatar">
+        <article class="popup__Container">
+          <img
+            src="./images/Close_Icon.png"
+            alt="icone close"
+            class="popup__close-edit-avatar"
+          />
+          <form class="popup__form popup__form-edit-avatar">
+            <h2 class="popup__title">Alterar a foto do perfil</h2>
+            <input
+              type="url"
+              class="popup__form-input popup__input-avatar"
+              id="avatar-input"
+              name="avatar"
+              placeholder="Link da imagem"
+              required
+            />
+            <span
+              id="avatar-input-error"
+              class="popup__message-input-error"
+            ></span>
+            <button
+              type="submit"
+              class="popup__button-save popup__button-save-avatar"
+            >
+              Salvar
+            </button>
+          </form>
+        </article>
+      </div>
+      <!--------------------------Fim popup profile Avatar edit  ------------->
+    </div>
+
+    <script type="module" src="./pages/index.js"></script>
+  </body>
+</html>
