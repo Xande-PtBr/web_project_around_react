@@ -1,11 +1,17 @@
 .elements {
   max-width: 880px;
+  /*  min-height: 880px; */
   margin: 36px auto 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 17px;
   row-gap: 20px;
+}
+
+.elements__cards-list {
+  margin: 0 auto;
+  padding: 0;
 }
 
 .elements__box {

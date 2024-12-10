@@ -1,13 +1,14 @@
 .popup {
-  display: none;
+  /* display: flex; */
   position: fixed;
   width: 100vw;
   height: 100vh;
   align-items: center;
-  top: 0;
+  top: 195px;
   left: 0;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
+  /* opacity: 0; */
 }
 
 .popup__Container {
@@ -28,21 +29,12 @@
 }
 
 .popup__close {
+  /*  display: block; */
   position: absolute;
   width: 30px;
   height: 30px;
   top: -30px;
-  left: 430px;
-  cursor: pointer;
-  transition: filter 0.3s ease;
-}
-
-.popup__close-card {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -30px;
-  left: 430px;
+  right: -30px;
   cursor: pointer;
   transition: filter 0.3s ease;
 }
@@ -160,7 +152,7 @@
 }
 
 .popup__message-input-error {
-  display: block;
+  display: none;
   width: 358px;
   height: 24px;
   margin: 0 0 0 36px;
@@ -185,15 +177,17 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  max-width: 75vw;
-  max-height: 75vh;
   border: none;
   border-radius: 10px;
   margin: 0 auto;
+  /*  align-items: center; */
+  max-width: 816px;
+  /*   max-height: 540px; */
 }
 
 .popup__title-image {
   position: absolute;
+  bottom: -20px;
   font-family: "Inter", Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -208,8 +202,8 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: -30px;
-  right: -30px;
+  top: -35px;
+  right: -225px;
   cursor: pointer;
   transition: filter 0.3s ease;
 }
@@ -225,16 +219,6 @@
 .popup__form-confirmation-delete {
   width: 430px;
   height: 181px;
-}
-
-.popup__close-delete {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -30px;
-  left: 430px;
-  cursor: pointer;
-  transition: filter 0.3s ease;
 }
 
 .popup__button-confirmation-delete {
@@ -259,23 +243,13 @@
 /*----------------- popup form edit avatar -----------------*/
 
 .popup__form-edit-avatar {
-  width: 430px;
-  height: 272px;
-}
-
-.popup__close-edit-avatar {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -30px;
-  left: 430px;
-  cursor: pointer;
-  transition: filter 0.3s ease;
+  max-width: 430px;
+  max-height: 272px;
 }
 
 .popup__form-input {
   width: 358px;
-  margin: 44px 36px 0 36px;
+  margin: 54px 36px 0 36px;
   padding: 0;
   border: none;
   border-bottom: 2px solid rgb(194, 192, 192);
@@ -287,7 +261,7 @@
 }
 
 .popup__button-save-avatar {
-  margin: 30px 36px 36px 36px;
+  margin: 48px 36px 36px 36px;
 }
 
 /*---------------Fim popup form edit avatar---------------------*/
