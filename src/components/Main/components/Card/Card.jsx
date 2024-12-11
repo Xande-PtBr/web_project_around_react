@@ -12,7 +12,7 @@ export default function Card(props) {
       <img src={Trash} alt="lixeira" className="elements__trash" />
       <img
         src={link}
-        alt="image01"
+        alt={name}
         className="elements__image"
         onClick={() => handleOpenPopup(imageComponent)}
       />
