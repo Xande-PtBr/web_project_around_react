@@ -1,8 +1,6 @@
 .popup {
   display: flex;
   position: fixed;
-  /*   width: 100vw;
-  height: 100vh; */
   align-items: center;
   justify-content: center;
   bottom: 0;
@@ -11,11 +9,9 @@
   right: 0;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
-  /* opacity: 0; */
 }
 
 .popup__Container {
-  /*   width: auto; */
   display: flex;
   position: relative;
   flex-direction: column;
@@ -33,7 +29,6 @@
 }
 
 .popup__close {
-  /*  display: block; */
   position: absolute;
   width: 30px;
   height: 30px;
@@ -184,12 +179,8 @@
   flex-direction: column;
   border: none;
   border-radius: 10px;
-  /*  margin: 0 auto; */
-  /*  align-items: center; */
   max-width: 816px;
-
   background-color: transparent;
-  /*   max-height: 540px; */
 }
 
 .popup__title-image {
@@ -368,7 +359,5 @@
   }
   .popup__view-image {
     margin: 0 auto;
-    /*   max-width: 540px;
-    max-height: 299px; */
   }
 }
