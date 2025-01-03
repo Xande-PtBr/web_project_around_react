@@ -57,12 +57,14 @@
   width: 21px;
   height: 19px;
   cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image: url("../images/like.png");
 }
 
-.elements__Liked {
-  width: 21px;
-  height: 19px;
-  cursor: pointer;
+.elements__like-active {
+  background-image: url("../images/liked.png");
 }
 
 .elements__trash {
