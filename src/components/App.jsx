@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import api from "./utils/api";
-import CurrentUserContext from "./contexts/CurrentUserContext";
+import Header from "./Header/Header";
+import Main from "./Main/Main";
+import api from "../utils/api";
+import CurrentUserContext from "../contexts/CurrentUserContext";
 
 function App() {
   const [cards, setCards] = useState([]);
