@@ -15,7 +15,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 
   getAppInfo() {
@@ -37,7 +37,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 
   //--------pega informações do perfil
@@ -51,7 +51,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 
   setUserInfo(data) {
@@ -69,7 +69,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 
   changeLikeCardStatus(cardId, isLiked) {
@@ -90,7 +90,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 
   deleteLike(cardId) {
@@ -104,7 +104,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 
   deleteCard(cardId) {
@@ -118,7 +118,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 
   editUserInfo(name, about) {
@@ -136,7 +136,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 
   addNewCard(name, link) {
@@ -154,7 +154,7 @@ class Api {
         }
         // se o servidor retornar um erro, rejeite a promessa
       })
-      .catch((err) => console.log(`Error: ${err.getMessage()}`));
+      .catch((err) => console.error(`Error: ${err.getMessage()}`));
   }
 }
 

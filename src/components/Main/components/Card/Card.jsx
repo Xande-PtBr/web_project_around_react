@@ -9,7 +9,6 @@ function Card(props) {
   const cardLikeButtonClassName = `elements__like ${
     isLiked ? "elements__like-active" : ""
   }`;
-  function handleCardDelete() {}
 
   return (
     <div className="elements__box">

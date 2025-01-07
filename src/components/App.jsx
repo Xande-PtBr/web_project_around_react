@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   async function handleCardDelete(card) {
-    api.deleteCard(card._id).then((res) => {
+    api.deleteCard(card._id).then(() => {
       const newCards = cards.filter((c) => c._id !== card._id);
       setCards(newCards);
     });
@@ -57,7 +57,6 @@ function App() {
   }
 
   const handleAddPlaceSubmit = async (newCard) => {
-    console.log(newCard);
     await api.addNewCard(newCard.name, newCard.link).then((newCard) => {
       setCards([newCard, ...cards]);
     });
@@ -73,29 +72,26 @@ function App() {
   }
 
   return (
-    console.log(cards),
-    (
-      <CurrentUserContext.Provider
-        value={{
-          currentUser,
-          handleUpdateUser,
-          handleUpdateAvatar,
-          handleAddPlaceSubmit,
-        }}
-      >
-        <div className="page">
-          <Header />
-          <Main
-            handleCardLike={handleCardLike}
-            cards={cards}
-            onCardDelete={handleCardDelete}
-            onOpenPopup={handleOpenPopup}
-            onClosePopup={handleClosePopup}
-            popup={popup}
-          />
-        </div>
-      </CurrentUserContext.Provider>
-    )
+    <CurrentUserContext.Provider
+      value={{
+        currentUser,
+        handleUpdateUser,
+        handleUpdateAvatar,
+        handleAddPlaceSubmit,
+      }}
+    >
+      <div className="page">
+        <Header />
+        <Main
+          handleCardLike={handleCardLike}
+          cards={cards}
+          onCardDelete={handleCardDelete}
+          onOpenPopup={handleOpenPopup}
+          onClosePopup={handleClosePopup}
+          popup={popup}
+        />
+      </div>
+    </CurrentUserContext.Provider>
   );
 }
 

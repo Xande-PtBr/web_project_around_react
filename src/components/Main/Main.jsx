@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import add from "../../images/add.png";
 import edit from "../../images/edit.png";
 import Footer from "../../components/Footer/Footer";
@@ -24,8 +24,6 @@ function Main({
     title: "Alterar a foto do perfil",
     children: <EditAvatar />,
   };
-
-  function handleCardDelete(props) {}
 
   return (
     <>
